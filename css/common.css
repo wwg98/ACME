@@ -3,7 +3,8 @@
 
 :root{
   /* Layout */
-  --base-unit:27px;
+  --base-unit: 27px;
+  --base-font: 16px;
 
 
   /* Color styles */
@@ -21,17 +22,40 @@
 --c-t-a: rgba(41, 44, 46, 1);
 
 /* Text-size styles */
---heading--x-l: 55px;
---body--l: 32px;
---heading--s: 24px;
---body--m: 16px;
---nav--item: 14px;
---body--m-plus: 18px;
---link: 16px;
---button---secondary: 14px;
---button---primary: 14px;
+  --heading--x-l: calc(var(--base-font) * 3.4375);
+  --body--l: calc(var(--base-font) * 2);
+  --heading--s: calc(var(--base-font) * 1.5);
+  --body--m: var(--base-font);
+  --nav--item: calc(var(--base-font) * 0.875);
+  --body--m-plus: calc(var(--base-font) * 1.125);
+  --link: var(--base-font);
+  --button---secondary: calc(var(--base-font) * 0.875);
+  --button---primary: calc(var(--base-font) * 0.875);
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+/* 폰트 위계 */
+.text-heading-xl{
+  font-size: calc(var(--base-font) * 3.4375);
+  line-height: calc(var(--base-unit) * 3);
+}
+
+.text-heading-s{
+  font-size: calc(var(--base-font) * 1.5);
+  line-height: var(--base-unit);
+}
+.text-body-l{
+  font-size: calc(var(--base-font) * 2);
+  line-height: calc(var(--base-unit) * 2);
+}
+.text-body-m{
+  font-size: var(--base-font);
+  line-height: var(--base-unit);
+}
+.text-body-m-plus{
+  font-size: 1calc(var(--base-font) * 1.125);
+  line-height: var(--base-unit);
 }
