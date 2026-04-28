@@ -1,2 +1,6 @@
 @import url('normalize.css');
 @import url('reset.css');
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
