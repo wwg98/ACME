@@ -2,12 +2,10 @@
 @import url('reset.css');
 @import url('flex-utility.css');
 
-
 :root {
   /* Layout */
   --base-unit: 27px;
   --base-font: 16px;
-
 
   /* Color styles */
   --black: rgba(44, 44, 44, 1);
@@ -42,27 +40,27 @@ body {
 
 /* 폰트 위계 */
 .text-heading-xl {
-  font-size: calc(var(--base-font) * 3.4375);
+  font-size: var(--heading--x-l);
   line-height: calc(var(--base-unit) * 3);
 }
 
 .text-heading-s {
-  font-size: calc(var(--base-font) * 1.5);
+  font-size: var(--heading--s);
   line-height: var(--base-unit);
 }
 
 .text-body-l {
-  font-size: calc(var(--base-font) * 2);
+  font-size: var(--body--l);
   line-height: calc(var(--base-unit) * 2);
 }
 
 .text-body-m {
-  font-size: var(--base-font);
+  font-size: var(--body--m);
   line-height: var(--base-unit);
 }
 
 .text-body-m-plus {
-  font-size: calc(var(--base-font) * 1.125);
+  font-size: var(--body--m-plus);
   line-height: var(--base-unit);
 }
 
@@ -83,7 +81,7 @@ body {
 
 .btn-primary {
   background: var(--primary);
-  color: var(--secondary)
+  color: var(--secondary);
 }
 
 /* 폼 요소 */
@@ -105,7 +103,7 @@ form .field {
   padding: 0 20px;
   display: flex;
   align-items: center;
-  color: var(--light--grays);
+  color: var(--light--gray);
 }
 
 form .field input {
@@ -114,13 +112,12 @@ form .field input {
 }
 
 form .field input::placeholder {
-  color: (var(--super--light--gray));
+  color: var(--super--light--gray);
 }
 
 form button {
   height: calc(var(--base-unit) * 2);
   border-radius: 3px;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +138,7 @@ form button {
   padding: calc(var(--base-unit) * 3) 0;
 }
 
-.inner-top-pd{
+.inner-top-pd {
   padding-top: calc(var(--base-unit) * 3);
 }
 
