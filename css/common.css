@@ -34,8 +34,10 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif;
   font-size: var(--base-font);
+  line-height: var(--base-unit); */
+  font: var(--base-font)/var(--base-unit) "Open Sans", sans-serif;
 }
 
 /* 폰트 위계 */
@@ -161,19 +163,20 @@ form button {
   padding-top: calc(var(--base-unit) * 3);
 }
 
-/* 헤더 */
-body>header {
-  background: var(--white);
-  padding: var(--base-unit) 0;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, .1);
-}
-
-.logo span {
+.hidden{
   position: absolute;
   clip-path: inset(50%);
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+
+/* 헤더 */
+body>header {
+  background: var(--white);
+  padding: var(--base-unit) 0;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, .1);
 }
 
 header nav ul{
