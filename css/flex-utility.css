@@ -18,6 +18,10 @@
   align-items: center;
 }
 
-.g-1{
+.g-1 {
   gap: var(--base-unit);
+}
+
+.g-2 {
+  gap: calc(var(--base-unit) * 2);
 }

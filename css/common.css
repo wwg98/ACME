@@ -60,6 +60,7 @@ body {
   font-size: var(--body--l);
   line-height: calc(var(--base-unit) * 2);
   font-weight: 300;
+  text-align: center;
 }
 
 .text-body-m {
@@ -70,6 +71,8 @@ body {
 .text-body-m-plus {
   font-size: var(--body--m-plus);
   line-height: var(--base-unit);
+  text-align: center;
+  color: var(--light--gray);
 }
 
 .text-nav {
@@ -233,4 +236,12 @@ header nav ul li:first-child {
 }
 .slidewrapper button.next {
   right: 0;
+}
+
+/* cta */
+.cta {
+  background: var(--c-t-a);
+}
+.cta h3 {
+  color: var(--white);
 }
