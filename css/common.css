@@ -187,6 +187,10 @@ hr {
   text-decoration: underline;
   color: var(--primary);
 }
+
+section .header {
+  margin-bottom: calc(var(--base-unit) * 2);
+}
 /* 헤더 */
 body > header {
   background: var(--white);
@@ -221,6 +225,11 @@ header nav ul li:first-child {
   flex-direction: column;
   align-items: center;
   gap: var(--base-unit);
+}
+
+.slidecontainer li > p {
+  width: 700px;
+  text-align: center;
 }
 
 .slidewrapper button {
