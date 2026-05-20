@@ -37,22 +37,18 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
+a{
+  text-decoration:none;
+  color:inherit;
 }
-
-img {
-  vertical-align: top;
+img{
+  vertical-align:top;
 }
-
-button, input {
+button, input{
   background: none;
-  border: none;
+  border:none;
 }
