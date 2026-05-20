@@ -206,6 +206,13 @@ body > header {
   background: var(--white);
   padding: var(--base-unit) 0;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  transition: 0.3s ease-out;
+}
+
+body > header.fixed {
+  padding: calc(var(--base-unit) / 2) 0;
 }
 
 header nav ul {
