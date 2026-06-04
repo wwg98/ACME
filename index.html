@@ -62,43 +62,47 @@
         </ul>
       </section>
       <hr class="container" />
-      <section class="testimonial slidewrapper container inner-pd">
+      <section class="testimonial">
         <h2 class="hidden">testimonial</h2>
-        <ul class="slidecontainer">
-          <li>
-            <blockquote>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
-                qui debitis dicta mollitia!
-              </p>
-            </blockquote>
-            <small>john doe</small>
-          </li>
-          <li>
-            <blockquote>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
-                qui debitis dicta mollitia!
-              </p>
-            </blockquote>
-            <small>jane</small>
-          </li>
-          <li>
-            <blockquote>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
-                qui debitis dicta mollitia!
-              </p>
-            </blockquote>
-            <small>tomas</small>
-          </li>
-        </ul>
-        <button type="button" class="button prev">
-          <span class="material-icons">chevron_left</span>
-        </button>
-        <button type="button" class="button next">
-          <span class="material-icons">chevron_right</span>
-        </button>
+        <div class="grandWrapper">
+          <div class="wrapper swiper control-slide">
+            <div class="control swiper-wrapper">
+              <div class="swiper-slide">
+                <blockquote>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium
+                    nulla qui debitis dicta mollitia!
+                  </p>
+                </blockquote>
+                <small>john doe</small>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium
+                    nulla qui debitis dicta mollitia!
+                  </p>
+                </blockquote>
+                <small>jane</small>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium
+                    nulla qui debitis dicta mollitia!
+                  </p>
+                </blockquote>
+                <small>tomas</small>
+              </div>
+            </div>
+          </div>
+          <button class="prev">
+            <span class="material-icons">chevron_left</span>
+          </button>
+          <button class="next">
+            <span class="material-icons">chevron_right</span>
+          </button>
+        </div>
       </section>
       <section class="cta inner-pd d-flex flex-column align-items-center g-2">
         <div class="content d-flex flex-column g-1">
@@ -109,6 +113,7 @@
       </section>
     </main>
     <footer id="footer" class="inner-pd d-flex flex-column align-items-center g-1"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
