@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
 
   <body>
-    <header id="header"></header>
+    <header></header>
     <main>
       <section class="hero inner-top-pd">
         <div class="container d-flex flex-column align-items-center g-1">
@@ -62,47 +63,45 @@
         </ul>
       </section>
       <hr class="container" />
-      <section class="testimonial">
+      <section class="testimonial slidewrapper container inner-pd">
         <h2 class="hidden">testimonial</h2>
-        <div class="grandWrapper">
-          <div class="wrapper swiper control-slide">
-            <div class="control swiper-wrapper">
-              <div class="swiper-slide">
-                <blockquote>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium
-                    nulla qui debitis dicta mollitia!
-                  </p>
-                </blockquote>
-                <small>john doe</small>
-              </div>
-              <div class="swiper-slide">
-                <blockquote>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium
-                    nulla qui debitis dicta mollitia!
-                  </p>
-                </blockquote>
-                <small>jane</small>
-              </div>
-              <div class="swiper-slide">
-                <blockquote>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium
-                    nulla qui debitis dicta mollitia!
-                  </p>
-                </blockquote>
-                <small>tomas</small>
-              </div>
-            </div>
-          </div>
-          <button class="prev">
-            <span class="material-icons">chevron_left</span>
-          </button>
-          <button class="next">
-            <span class="material-icons">chevron_right</span>
-          </button>
+        <div class="swiper">
+          <ul class="slidecontainer swiper-wrapper">
+            <li class="swiper-slide">
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
+                  qui debitis dicta mollitia!
+                </p>
+              </blockquote>
+              <small>john doe</small>
+            </li>
+            <li class="swiper-slide">
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
+                  qui debitis dicta mollitia!
+                </p>
+              </blockquote>
+              <small>jane</small>
+            </li>
+            <li class="swiper-slide">
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
+                  qui debitis dicta mollitia!
+                </p>
+              </blockquote>
+              <small>tomas</small>
+            </li>
+          </ul>
         </div>
+        <button type="button" class="button prev">
+          <span class="material-icons">chevron_left</span>
+        </button>
+        <button type="button" class="button next">
+          <span class="material-icons">chevron_right</span>
+        </button>
       </section>
       <section class="cta inner-pd d-flex flex-column align-items-center g-2">
         <div class="content d-flex flex-column g-1">
@@ -112,8 +111,28 @@
         <a href="#" class="btn btn-primary big">sign up for free</a>
       </section>
     </main>
-    <footer id="footer" class="inner-pd d-flex flex-column align-items-center g-1"></footer>
+    <footer class="inner-pd d-flex flex-column align-items-center g-1">
+      <p>&copy; 2014. All rights reserved. Questions?</p>
+      <p>Email us at <a href="#" class="text-link">office@product.com</a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="js/main.js"></script>
+    <script>
+      const swiper = new Swiper(".testimonial .swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+      });
+      const slideWrapper = document.querySelector(".testimonial"),
+        prevBtn = slideWrapper.querySelector(".prev"),
+        nextBtn = slideWrapper.querySelector(".next");
+
+      nextBtn.addEventListener("click", () => {
+        swiper.slideNext();
+      });
+      prevBtn.addEventListener("click", () => {
+        swiper.slidePrev();
+      });
+    </script>
   </body>
 </html>

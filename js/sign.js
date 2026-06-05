@@ -13,15 +13,14 @@ form.addEventListener("submit", e => {
     if (!input.value) {
       input.focus();
       let pos = input.parentElement.offsetTop;
-      let msg = `${input.getAttribute("id")}은 필수야~`;
+      let msg = `${input.getAttribute("id")}을 필수야~`;
       openFeedback(pos, msg);
       return;
     } else {
       ++completed;
     }
   }
-
-  // 비밀버호 일치 확인 하기
+  //비밀번호 일치 확인하기, 틀리면, 비밀번호가 일치하지 않습니다.
   if (passwd.value && passwdCF.value) {
     if (passwd.value !== passwdCF.value) {
       let pos = passwdCF.parentElement.offsetTop;
@@ -31,6 +30,7 @@ form.addEventListener("submit", e => {
       closeFeedback();
     }
   }
+  console.log(completed);
 });
 
 function openFeedback(pos, msg) {
@@ -38,7 +38,6 @@ function openFeedback(pos, msg) {
   feedback.innerHTML = `<p>${msg}</p>`;
   feedback.style.visibility = "visible";
 }
-
 function closeFeedback() {
   feedback.style.visibility = "hidden";
 }

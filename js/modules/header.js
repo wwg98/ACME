@@ -1,8 +1,6 @@
 export function renderHeader() {
-  const header = document.querySelector("#header");
-
-  header.innerHTML = `
-      <div class="container d-flex justify-content-between align-items-center">
+  const header = document.querySelector("body > header");
+  header.innerHTML = `<div class="container d-flex justify-content-between align-items-center">
         <h1 class="logo">
           <a href="index.html">
             <img src="images/logo.png" alt="acme logo" />
@@ -26,6 +24,5 @@ export function renderHeader() {
             </li>
           </ul>
         </nav>
-      </div>
-  `;
+      </div>`;
 }

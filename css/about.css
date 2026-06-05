@@ -53,3 +53,7 @@
 .qnalist details[open] .question {
   font-weight: bold;
 }
+
+.portfolio .swiper {
+  padding-bottom: 40px;
+}

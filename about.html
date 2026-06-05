@@ -8,15 +8,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/about.css" />
   </head>
 
   <body>
-    <header id="header"></header>
+    <header>
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="acme logo" />
+            <span class="hidden">ACME</span>
+          </a>
+        </h1>
+        <nav>
+          <ul class="d-flex align-items-center">
+            <li>
+              <a href="index.html" class="text-nav">home</a>
+              /
+              <a href="about.html" class="text-nav">about</a>
+            </li>
+            <li>
+              <a href="signin.html" class="btn btn-secondary"
+                ><span class="material-icons">lock</span>sign in</a
+              >
+            </li>
+            <li>
+              <a href="signup.html" class="btn btn-primary">sign up for free</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <section class="hero inner-pd">
         <div class="container">
@@ -101,46 +128,44 @@
           <h3 class="text-body-l">Example Portfolios</h3>
           <p class="text-body-m-plus">Here's some examples of what you can create with our app.</p>
         </div>
-        <div class="grandWrapper">
-          <div class="wrapper swiper control-slide">
-            <div class="control swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/portfolio_01.jpg" alt="portfolio_01" />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem consequatur
-                  facere, dolores fugiat magnam neque doloribus sint, ea odio sed dicta eos iste
-                  quos accusantium quia! Ut, pariatur quia.
-                </p>
-                <a href="" class="text-link">Link to portfolio &rarr;</a>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/portfolio_01.jpg" alt="portfolio_01" />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem consequatur
-                  facere, dolores fugiat magnam neque doloribus sint, ea odio sed dicta eos iste
-                  quos accusantium quia! Ut, pariatur quia.
-                </p>
-                <a href="" class="text-link">Link to portfolio &rarr;</a>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/portfolio_01.jpg" alt="portfolio_01" />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem consequatur
-                  facere, dolores fugiat magnam neque doloribus sint, ea odio sed dicta eos iste
-                  quos accusantium quia! Ut, pariatur quia.
-                </p>
-                <a href="" class="text-link">Link to portfolio &rarr;</a>
-              </div>
-            </div>
-          </div>
-          <button class="prev">
-            <span class="material-icons">chevron_left</span>
-          </button>
-          <button class="next">
-            <span class="material-icons">chevron_right</span>
-          </button>
+        <div class="swiper">
+          <ul class="slidecontainer swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="images/portfolio_01.jpg" alt="portfolio_01" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem consequatur
+                facere, dolores fugiat magnam neque doloribus sint, ea odio sed dicta eos iste quos
+                accusantium quia! Ut, pariatur quia.
+              </p>
+              <a href="" class="text-link">Link to portfolio &rarr;</a>
+            </li>
+            <li class="swiper-slide">
+              <img src="images/portfolio_01.jpg" alt="portfolio_01" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem consequatur
+                facere, dolores fugiat magnam neque doloribus sint, ea odio sed dicta eos iste quos
+                accusantium quia! Ut, pariatur quia.
+              </p>
+              <a href="" class="text-link">Link to portfolio &rarr;</a>
+            </li>
+            <li class="swiper-slide">
+              <img src="images/portfolio_01.jpg" alt="portfolio_01" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore autem consequatur
+                facere, dolores fugiat magnam neque doloribus sint, ea odio sed dicta eos iste quos
+                accusantium quia! Ut, pariatur quia.
+              </p>
+              <a href="" class="text-link">Link to portfolio &rarr;</a>
+            </li>
+          </ul>
           <div class="swiper-pagination"></div>
         </div>
+        <button type="button" class="button prev">
+          <span class="material-icons">chevron_left</span>
+        </button>
+        <button type="button" class="button next">
+          <span class="material-icons">chevron_right</span>
+        </button>
       </section>
       <section class="cta inner-pd d-flex flex-column align-items-center g-2">
         <div class="content d-flex flex-column g-1">
@@ -150,9 +175,12 @@
         <a href="#" class="btn btn-primary big">sign up for free</a>
       </section>
     </main>
-    <footer id="footer" class="inner-pd d-flex flex-column align-items-center g-1"></footer>
+    <footer class="inner-pd d-flex flex-column align-items-center g-1">
+      <p>&copy; 2014. All rights reserved. Questions?</p>
+      <p>Email us at <a href="#" class="text-link">office@product.com</a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script type="module" src="js/main.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/about.js"></script>
   </body>
 </html>
